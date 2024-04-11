@@ -9,7 +9,7 @@ source ensure_vars.sh
 echo "Initializing ..."
 terraform init || echo "\"terraform init\" failed"
 
-varfile="$HUB_DEPLOYMENT_NAME.tfvars"
+varfile="sandbox-lincbrain.tfvars"
 
 # List of Terraform modules to apply in sequence
 targets=(

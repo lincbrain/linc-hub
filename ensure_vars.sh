@@ -1,5 +1,16 @@
 #!/bin/bash
 
+while IFS= read -r line; do
+    if [[ $line =~ ^[^#]*= ]]; then
+        key=$(echo $line | cut -d '=' -f 1 | xargs)
+        value=$(echo $line | cut -d '=' -f 2- | xargs)
+        declare TF_VAR_$key="$value"
+        export TF_VAR_$key
+    fi
+done < "sandbox-lincbrain.tfvars"
+
+export HUB_DEPLOYMENT_NAME="sandbox-lincbrain"
+
 if [ -z "${TF_VAR_github_client_id-}" ]; then
    echo "Must provide github client id env var. Exiting...."
    exit 1

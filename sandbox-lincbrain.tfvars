@@ -1,0 +1,11 @@
+singleuser_image_repo = "dandiarchive/dandihub"
+region = "us-west-1"
+singleuser_image_tag = "latest"
+jupyterhub_domain = "hub-sandbox.lincbrain.org"
+jupyterhub_name = "sandbox-lincbrain"
+dandi_api_domain = "https://staging-api.lincbrain.org"
+admin_users = ["asmacdo", "dandibot", "satra", "aaronkanzer", "kabilar"]
+github_client_id = "fffb5efe40b01617b837"
+github_client_secret = "fd4c6baf8aa7ddb3750bca21d6992c653f446d39"
+danditoken = "0ead6c0e8fad218d9beb795c2889bc597a0220a8"
+ssl_cert_arn = "arn:aws:acm:us-west-1:151312473579:certificate/ca80792b-a056-4f00-9fc0-8bca3c8a1b7e"
