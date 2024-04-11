@@ -118,6 +118,8 @@ Get "https://d2glxqk2uabbnd.cloudfront.net/9ebdca-071440425669-f2c05e17-0e20-a99
 
 • Added cert to loadbalancer in dandihub.yaml
 
+• Ran `aws eks update-kubeconfig --name jupyterhub-on-eks --region us-west-1` -- in order to inspect/alter the cluster locally
+
 Upon successful initial launch, a pod still wasn't able to be assigned due to issues with the security groups that karpenter was working with -- e.g. mismatch in some form, somewhat of a silent error
 
 `cleanup.sh` did bring down the nodes and EKS cluster (VPC, networking objects still remained) which was effective from a cost perspecrtive
