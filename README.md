@@ -10,6 +10,7 @@ Environment variables store secrets and hub deployment name:
   - `TF_VAR_github_client_id`: See Github Oauth Step
   - `TF_VAR_github_client_secret` See Github Oauth Step
   - `TF_VAR_aws_certificate_arn` See Create Cert Step
+  - `TF_VAR_danditoken`: A valid API Key from DANDI Archive
 
 ### Variables File
 
