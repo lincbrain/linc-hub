@@ -149,3 +149,14 @@ SUCCESS: Terraform apply of all modules completed successfully
 If you need to hook this up to DNS (Route 53) use this value: kubectl get svc/proxy-public -n jupyterhub --output jsonpath={.status.loadBalancer.ingress[].hostname}
 
 
+```
+Run #1
+╷
+│ Error: reading Secrets Manager Secret (arn:aws:secretsmanager:us-east-2:278212569472:secret:jupyterhub-on-eks-grafana-20240416140351173800000001-fYablo): operation error Secrets Manager: DescribeSecret, https response error StatusCode: 400, RequestID: 799b461b-e7db-4b8a-b0ec-6df51c60c916, api error AccessDeniedException: User: arn:aws:iam::151312473579:user/akanzer is not authorized to perform: secretsmanager:DescribeSecret on resource: arn:aws:secretsmanager:us-east-2:278212569472:secret:jupyterhub-on-eks-grafana-20240416140351173800000001-fYablo because no resource-based policy allows the secretsmanager:DescribeSecret action
+│ 
+│   with aws_secretsmanager_secret.grafana,
+│   on addons.tf line 340, in resource "aws_secretsmanager_secret" "grafana":
+│  340: resource "aws_secretsmanager_secret" "grafana" {
+│ 
+╵
+
